@@ -1,0 +1,25 @@
+		String formula = "10+11-12*13/14";
+
+		//数式（文字列）切り取り開始位置
+		int startIndex = 0;
+
+		ArrayList<String> formulaList = new ArrayList<String>();
+
+		for(int i = 0; formula.length() > i; i++){
+			try{
+				//数式を一文字ずつIntgerに変換
+				Integer.valueOf(String.valueOf(formula.charAt(i)));
+			} catch(NumberFormatException e) {
+				//数値変換に失敗した場合
+
+				//数式から数値を取得
+				formulaList.add(formula.substring(startIndex, i));
+				//数式から演算子を取得
+				formulaList.add(String.valueOf(formula.charAt(i)));
+				
+				//次回の切り取り開始位置
+				startIndex = ++i;
+			}
+		}
+		//数式から最後の数値を取得
+		formulaList.add(formula.substring(startIndex));
