@@ -1,25 +1,25 @@
 		String formula = "10+11-12*13/14";
 
-		//”®i•¶š—ñjØ‚èæ‚èŠJnˆÊ’u
+		//æ•°å¼ï¼ˆæ–‡å­—åˆ—ï¼‰åˆ‡ã‚Šå–ã‚Šé–‹å§‹ä½ç½®
 		int startIndex = 0;
 
 		ArrayList<String> formulaList = new ArrayList<String>();
 
 		for(int i = 0; formula.length() > i; i++){
 			try{
-				//”®‚ğˆê•¶š‚¸‚ÂIntger‚É•ÏŠ·
+				//æ•°å¼ã‚’ä¸€æ–‡å­—ãšã¤Intgerã«å¤‰æ›
 				Integer.valueOf(String.valueOf(formula.charAt(i)));
 			} catch(NumberFormatException e) {
-				//”’l•ÏŠ·‚É¸”s‚µ‚½ê‡
+				//æ•°å€¤å¤‰æ›ã«å¤±æ•—ã—ãŸå ´åˆ
 
-				//”®‚©‚ç”’l‚ğæ“¾
+				//æ•°å¼ã‹ã‚‰æ•°å€¤ã‚’å–å¾—
 				formulaList.add(formula.substring(startIndex, i));
-				//”®‚©‚ç‰‰Zq‚ğæ“¾
+				//æ•°å¼ã‹ã‚‰æ¼”ç®—å­ã‚’å–å¾—
 				formulaList.add(String.valueOf(formula.charAt(i)));
 				
-				//Ÿ‰ñ‚ÌØ‚èæ‚èŠJnˆÊ’u
+				//æ¬¡å›ã®åˆ‡ã‚Šå–ã‚Šé–‹å§‹ä½ç½®
 				startIndex = ++i;
 			}
 		}
-		//”®‚©‚çÅŒã‚Ì”’l‚ğæ“¾
+		//æ•°å¼ã‹ã‚‰æœ€å¾Œã®æ•°å€¤ã‚’å–å¾—
 		formulaList.add(formula.substring(startIndex));
