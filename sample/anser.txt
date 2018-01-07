@@ -19,6 +19,10 @@
 				
 				//次回の切り取り開始位置
 				startIndex = ++i;
+				
+				
+				
+//				aaaaaaaaaaaaaaaaa
 			}
 		}
 		//数式から最後の数値を取得
