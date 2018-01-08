@@ -19,7 +19,7 @@
 				
 				//次回の切り取り開始位置
 				startIndex = ++i;
-			}
+			} //テスト
 		}
 		//数式から最後の数値を取得
 		formulaList.add(formula.substring(startIndex));
